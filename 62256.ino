@@ -51,8 +51,8 @@ int readAddr(int addr){
   startHigh();
   setAddr(addr);
   digitalWrite(CE, LOW);
-  digitalWrite(OE, LOW);
   setIODir(INPUT);
+  digitalWrite(OE, LOW);
   int retNum = readIO();
   digitalWrite(CE, HIGH);
   digitalWrite(OE, HIGH);
